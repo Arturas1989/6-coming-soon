@@ -36,5 +36,42 @@
 .hero form{
     margin-bottom: 20px;
 }
-
+.left-column{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+.right-column{
+    display: inline-block;
+    float: right;
+    width: 40%;
+}
+main h2 {
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+main p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #777;
+}
+main p > a{
+    color: #E71E62;
+    text-decoration: none;
+}
+main p > a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .left-column{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .right-column{
+        width: 100%;
+    }
+}
 

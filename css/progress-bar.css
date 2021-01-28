@@ -28,5 +28,24 @@
     float: left;
     height: 100%;
     width: 80%;
+    background-color: transparent;
+}
+.progress-bar > .bottom > .progress > .loading{
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 0;
     background-color: var(--main-color);
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
 }

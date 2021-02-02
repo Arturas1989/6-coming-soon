@@ -5,7 +5,7 @@ import { socialsData } from './data/socialsData.js';
 import {renderProgressBars} from './components/renderProgressBars.js';
 import {progressBarData} from './data/progressBarData.js';
 
-clock('.clock', '12-14 18:00:00');
+clock('.clock', 'pomi');
 renderProgressBars('.left-column', progressBarData);
 const socialsHTML = renderSocials('footer > .socials', socialsData);
 

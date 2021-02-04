@@ -4,6 +4,11 @@
     gap: 20px;
     width: 100%;
 }
+.form.single-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
 .form > label {
    display: none;
 }
@@ -12,7 +17,7 @@
     width: 100%;
     padding: 10px 0;
     line-height: 24px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     border-bottom: 2px solid #ccc;
 }
@@ -21,6 +26,10 @@
     resize: vertical;
     min-height: 92px;
     max-height: 260px;
+}
+.form.form.single-column > .btn {
+    grid-column: 1/2;
+    justify-self: center;
 }
 .form > .btn {
     grid-column: 1/3;

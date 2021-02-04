@@ -39,6 +39,16 @@
 .hero form{
     margin-bottom: 20px;
 }
+.hero form input{
+   background-color: transparent;
+   border-bottom-color: #fff;
+   color: #fff;
+   font-size: 18px;
+}
+.hero form input::placeholder{
+   color: #fff;
+   font-style: italic;
+}
 .left-column{
     display: inline-block;
     float: left;

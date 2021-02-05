@@ -33,7 +33,7 @@
             </div>
             <form class="form single-column">
                 <label for="subscribe-email">Type your email</label>
-                <input id="subscribe-email" type="email" placeholder="Type your email" required>
+                <input data-validation-rules="email" id="subscribe-email" type="email" placeholder="Type your email" required>
                 <button class="btn" type="submit">Subscribe now</button>
             </form>
             <div class="mouse">
@@ -52,13 +52,13 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laboriosam rem neque <a href="mailto:21grupe@programuotojai.xyz">21grupe@programuotojai.xyz</a> quidem sed quasi unde maiores animi ex?</p>
             <form  class="form">
                 <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Name" required>
+                <input data-validation-rules="name" id="name" type="text" placeholder="Name" required>
 
-                <label for="message-email">Email</label>
-                <input id="message-email" type="email" placeholder="Email" required>
+                <label for="email">Email</label>
+                <input data-validation-rules="email" id="message-email" type="email" placeholder="Email" required>
                 
                 <label for="message">Message</label>
-                <textarea id="message" placeholder="Message" required></textarea>
+                <textarea data-validation-rules="text" id="message" placeholder="Message" required></textarea>
                 <button class="btn" type="submit">Send message</button>
             </form>
         </div>

@@ -6,10 +6,20 @@
     font-size: 18px;
     line-height: 20px;
     border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
     border: none;
     cursor: pointer;
     opacity: 0.9;
 }
 .btn:hover {
     opacity: 1;
+}
+.btn.fa {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 36px;
+    border-radius: 50%;
 }

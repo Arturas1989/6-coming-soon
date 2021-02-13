@@ -1,62 +1,47 @@
-import { Validator } from './Validator.js'
+import { Validator } from './Validator.js';
 
-function form (selector) {
-    const formDOM= document.querySelector(selector);
+function form(selector, toastr) {
+    const formDOM = document.querySelector(selector);
     const allInputsDOM = formDOM.querySelectorAll('input');
     const allTextareaDOM = formDOM.querySelectorAll('textarea');
     const allTextsDOM = [...allInputsDOM, ...allTextareaDOM];
     const submitDOM = formDOM.querySelector('.btn[type="submit"]');
 
-    const validator = new Validator()
+    const validator = new Validator();
 
-    submitDOM.addEventListener('click', event => {
+    submitDOM.addEventListener('click', (event) => {
         event.preventDefault();
 
         const errors = [];
-        
-
-       for (const input of allTextsDOM) {
+        for (const input of allTextsDOM) {
             const text = input.value;
-            const rule = input.dataset.validationRules;
-            let result = null;
+            const rule = input.dataset.validationRule;
 
-        switch (input.dataset.validationRules) {
-            case 'name':
-                result = validator.isValidName(text);
-                if(result!==true) {
-                    errors.push(result);
-                }
-                break;
-            case 'email':
-                result = validator.isValidEmail(text);
-                if(result!==true) {
-                    errors.push(result);
-                }
-                break;
-            case 'text':
-                result = validator.isValidText(text);
-                if(result!==true) {
-                    errors.push(result);
-                }
-                break;
-    
-                default:
-                console.log('rasta neatpazinta validavimo taisykle', text);
-                break;
-        }
-        
-       }
-       if(errors.length!==0){
-        console.log('ERROR: yra nevalidziu reiksmiu...');
-        console.log(errors);
-        }else{
-        console.log('SUCCESS: visi laukai validus!!!');
+            const ruleName = rule[0].toUpperCase() + rule.slice(1);
+            const result = validator['isValid' + ruleName](text);
+            if (result !== true) {
+                errors.push(result);
+            }
+
+            // const ruleMethods = {
+            //     name: 'isValidName',
+            //     email: 'isValidEmail',
+            //     text: 'isValidText',
+            // }
+
+            // const ruleName = ruleMethods[rule];
+            // const result = validator[ruleName](text);
+            // if (result !== true) {
+            //     errors.push(result);
+            // }
         }
 
+        if (errors.length) {
+            toastr.show('error', errors);
+        } else {
+            toastr.show('success', 'Informacija buvo išsiųsta!');
+        }
     });
-
-   
-   
 }
 
-export {form}
+export { form };

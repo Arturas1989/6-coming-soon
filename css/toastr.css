@@ -1,0 +1,42 @@
+.toastr {
+    display: none;
+    padding: 10px 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 15px;
+    align-items: center;
+}
+.toastr.show {
+    display: flex;
+}
+.toastr > p {
+    max-width: 200px;
+}
+.toastr > .fa {
+    display: none;
+}
+.toastr > .fa.fa-close,
+.toastr[data-type='success'] > .fa.fa-check,
+.toastr[data-type='error'] > .fa.fa-shield,
+.toastr[data-type='warning'] > .fa.fa-exclamation-triangle,
+.toastr[data-type='info'] > .fa.fa-exclamation-circle {
+    display: block;
+}
+.toastr[data-type='success'] {
+    background-color: #2aaba0;
+    color: #fff;
+}
+.toastr[data-type='error'] {
+    background-color: #ff7946;
+    color: #fff;
+}
+.toastr[data-type='warning'] {
+    background-color: #fceebf;
+    color: #333;
+}
+.toastr[data-type='info'] {
+    background-color: #7f97a3;
+    color: #fff;
+}

@@ -18,7 +18,7 @@
     height: 30px;
     margin-bottom: 40px;
 }
-.hero h1{
+.hero h1 {
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
@@ -26,35 +26,35 @@
     font-size: 54px;
     line-height: 60px;
 }
-.hero p{
+.hero p {
     display: inline-block;
     width: 100%;
     margin-bottom: 60px;
     font-size: 18px;
     line-height: 22px;
 }
-.hero .clock{
+.hero .clock {
     margin-bottom: 60px;
 }
-.hero form{
+.hero form {
     margin-bottom: 20px;
 }
-.hero form input{
-   background-color: transparent;
-   border-bottom-color: #fff;
-   color: #fff;
-   font-size: 18px;
+.hero form input {
+    background-color: transparent;
+    border-bottom-color: #fff;
+    color: #fff;
+    font-size: 18px;
 }
-.hero form input::placeholder{
-   color: #fff;
-   font-style: italic;
+.hero form input::placeholder {
+    color: #fff;
+    font-style: italic;
 }
-.left-column{
+.left-column {
     display: inline-block;
     float: left;
     width: 50%;
 }
-.right-column{
+.right-column {
     display: inline-block;
     float: right;
     width: 40%;
@@ -72,25 +72,25 @@ main p {
     margin-bottom: 20px;
     color: #777;
 }
-main p > a{
+main p > a {
     color: var(--secondary-color);
     text-decoration: none;
 }
-main p > a:hover{
+main p > a:hover {
     text-decoration: underline;
 }
 @media (max-width: 900px) {
-    .left-column{
+    .left-column {
         width: 100%;
         margin-bottom: 60px;
     }
-    .right-column{
+    .right-column {
         width: 100%;
     }
 }
 
 /* footer section  */
-footer.container{
+footer.container {
     padding-top: 0;
 }
 
@@ -125,18 +125,18 @@ footer img {
     height: 40px;
     margin-bottom: 40px;
 }
-footer .bottom-texts{
+footer .bottom-texts {
     display: inline-block;
     width: 100%;
     color: #fff9;
 }
-footer .bottom-texts > p{
+footer .bottom-texts > p {
     display: inline-block;
     padding: 0 10px;
     line-height: 30px;
     position: relative;
 }
-footer .bottom-texts > p::before{
+footer .bottom-texts > p::before {
     content: '';
     display: inline-block;
     width: 2px;
@@ -147,23 +147,34 @@ footer .bottom-texts > p::before{
     left: -2px;
     transform: translateY(-50%);
 }
-footer .bottom-texts > p:first-of-type::before{
+footer .bottom-texts > p:first-of-type::before {
     display: none;
 }
-.footer-last-text{
+.footer-last-text {
     display: inline-block;
     width: 100%;
     color: #fff9;
     line-height: 30px;
 }
-footer  p > a{
+footer p > a {
     color: #fff;
 }
 @media (max-width: 700px) {
-    footer .bottom-texts > p{
-        width: 100%;
-    }
-    footer .bottom-texts > p::before{
+    footer .row.back-to-top {
         display: none;
     }
+    footer .bottom-texts > p {
+        width: 100%;
+    }
+    footer .bottom-texts > p::before {
+        display: none;
+    }
+}
+footer .back-to-top {
+    position: relative;
+}
+footer .back-to-top > .btn {
+    position: absolute;
+    top: -24px;
+    right: -10px;
 }

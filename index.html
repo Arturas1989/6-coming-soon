@@ -1,88 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Coming soon project" />
+        <title>Coming soon</title>
+        <link rel="shortcut icon" href="./favicon.png" type="image/png" />
+        <!-- reset -->
+        <link rel="stylesheet" href="./css/variables.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <!-- 3rd party -->
+        <link rel="stylesheet" href="./css/font-awesome.min.css" />
+        <!-- components -->
+        <link rel="stylesheet" href="./css/layout.css" />
+        <link rel="stylesheet" href="./css/button.css" />
+        <link rel="stylesheet" href="./css/clock.css" />
+        <link rel="stylesheet" href="./css/form.css" />
+        <link rel="stylesheet" href="./css/mouse.css" />
+        <link rel="stylesheet" href="./css/progress-bar.css" />
+        <link rel="stylesheet" href="./css/toastr.css" />
+        <!-- custom -->
+        <link rel="stylesheet" href="./css/custom.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Coming soon project">
-    <title>Coming soon</title>
-    <!-- reset -->
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <!-- 3rd party -->
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <!-- components -->
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/button.css">
-    <link rel="stylesheet" href="./css/clock.css">
-    <link rel="stylesheet" href="./css/form.css">
-    <link rel="stylesheet" href="./css/mouse.css">
-    <link rel="stylesheet" href="./css/progress-bar.css">
-    <!-- custom -->
-    <link rel="stylesheet" href="./css/custom.css">
-</head>
-
-<body>
-    <div class="container bg-main-color hero">
-        <div class="row-short">
-            <img src="./img/logo.png" alt="logo">
-            <h1>Coming soon</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi dicta accusantium maxime aliquid consequatur repudiandae atque in tenetur!</p>
-            <div class="clock">
-               CLOCK
+    <body>
+        <div class="container bg-main-color hero">
+            <div class="row-short">
+                <img src="./img/logo.png" alt="logo" />
+                <h1>Coming soon</h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Sequi dicta accusantium maxime aliquid consequatur
+                    repudiandae atque in tenetur!
+                </p>
+                <div class="clock">CLOCK</div>
+                <form class="form single-column">
+                    <label for="subscribe-email">Type your email</label>
+                    <input
+                        data-validation-rule="email"
+                        id="subscribe-email"
+                        type="email"
+                        placeholder="Type your email"
+                        required
+                    />
+                    <button class="btn" type="submit">Subscribe now</button>
+                </form>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
             </div>
-            <form class="form single-column">
-                <label for="subscribe-email">Type your email</label>
-                <input data-validation-rules="email" id="subscribe-email" type="email" placeholder="Type your email" required>
-                <button class="btn" type="submit">Subscribe now</button>
-            </form>
-            <div class="mouse">
-                <div class="wheel"></div>
+        </div>
+        <main class="container">
+            <div class="row">
+                <div class="left-column">
+                    <h2>About startup</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Beatae <a href="#">Matrox</a> rem neque magnam
+                        quidem sed quasi unde maiores animi ex?
+                    </p>
+                </div>
+                <div class="right-column">
+                    <h2>Have any question?</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Beatae laboriosam rem neque
+                        <a href="mailto:21grupe@programuotojai.xyz"
+                            >21grupe@programuotojai.xyz</a
+                        >
+                        quidem sed quasi unde maiores animi ex?
+                    </p>
+                    <form class="form">
+                        <label for="name">Name</label>
+                        <input
+                            data-validation-rule="name"
+                            id="name"
+                            type="text"
+                            placeholder="Name"
+                            required
+                        />
+
+                        <label for="email">Email</label>
+                        <input
+                            data-validation-rule="email"
+                            id="message-email"
+                            type="email"
+                            placeholder="Email"
+                            required
+                        />
+
+                        <label for="message">Message</label>
+                        <textarea
+                            data-validation-rule="text"
+                            id="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                        <button class="btn" type="submit">Send message</button>
+                    </form>
+                </div>
             </div>
-        </div> 
-    </div>
-    <main class="container">
-       <div class="row">
-        <div class="left-column">
-            <h2>About startup</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae <a href="#">Matrox</a> rem neque magnam quidem sed quasi unde maiores animi ex?</p>
-        </div>
-        <div class="right-column">
-            <h2>Have any question?</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laboriosam rem neque <a href="mailto:21grupe@programuotojai.xyz">21grupe@programuotojai.xyz</a> quidem sed quasi unde maiores animi ex?</p>
-            <form  class="form">
-                <label for="name">Name</label>
-                <input data-validation-rules="name" id="name" type="text" placeholder="Name" required>
-
-                <label for="email">Email</label>
-                <input data-validation-rules="email" id="message-email" type="email" placeholder="Email" required>
-                
-                <label for="message">Message</label>
-                <textarea data-validation-rules="text" id="message" placeholder="Message" required></textarea>
-                <button class="btn" type="submit">Send message</button>
-            </form>
-        </div>
-       </div> 
-    </main>
-    <footer class="container bg-main-color">
-        <div class="row socials">
-            Laukiam socials turinio...
-        </div>
-        <div class="row-short">
-            <img src="./img/white-logo.png" alt="Footer logo">
-            <div class="bottom-texts">
-                <p>Copyright &copy; 2021 <a href="#">Matrox</a> </p>
-                <p>All rights reserved</p>
-                <p>Design by <a href="#" target="_blank">TrendyTheme</a></p>
+        </main>
+        <footer id="footer" class="container bg-main-color">
+            <div class="row back-to-top">
+                <a href="#" class="btn fa fa-angle-up"></a>
             </div>
-            <p class="footer-last-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati <a href="#">200+</a> officiis nemo, dolorum adipisci facilis? Tenetur nemo <a href="#">Matrox</a> odio?</p>
-        </div>
-        
+            <div class="row socials">Laukiam socials turinio...</div>
+            <div class="row-short">
+                <img src="./img/white-logo.png" alt="Footer logo" />
+                <div class="bottom-texts">
+                    <p>Copyright &copy; 2021 <a href="#">Matrox</a></p>
+                    <p>All rights reserved</p>
+                    <p>Design by <a href="#" target="_blank">TrendyTheme</a></p>
+                </div>
+                <p class="footer-last-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae obcaecati <a href="#">200+</a> officiis nemo, dolorum
+                    adipisci facilis? Tenetur nemo <a href="#">Matrox</a> odio?
+                </p>
+            </div>
+        </footer>
 
-    </footer>
-
-    
-    <script src="./js/main.js" type='module'></script>
-</body>
-
+        <script src="./js/main.js" type="module"></script>
+    </body>
 </html>

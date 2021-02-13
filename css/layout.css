@@ -6,6 +6,7 @@
 .container > .row {
     display: inline-block;
     width: 1000px;
+    float: left;
     margin: 0 calc(50% - 500px);
 }
 .container > .row-short {
@@ -13,7 +14,6 @@
     width: 600px;
     margin: 0 calc(50% - 300px);
 }
-
 
 @media (max-width: 1100px) {
     .container > .row {
